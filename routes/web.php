@@ -16,7 +16,7 @@ Auth::routes();
 Route::prefix('/')->middleware('auth')->group(function () {
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 Route::get('/home', 'HomeController@index')->name('home');
 
