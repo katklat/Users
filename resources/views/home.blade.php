@@ -9,5 +9,6 @@
             <li class="breadcrumb-item">Home</li>
         </ul>
     </div>
+    
 </main>
 @endsection
