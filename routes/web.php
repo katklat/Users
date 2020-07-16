@@ -19,7 +19,11 @@ Route::get('/', function () {
     return view('home');
 });
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/index', 'RegistrationController@index')->name('index');
+Route::resource('registrations', 'RegistrationController')->only([
+    'index', 'create'
+]);
+Route::post('/registrations', 'RegistrationController@register')->name('register');
+Route::patch('/registrations', 'RegistrationController@unregister')->name('unregister');
 Route::resource('/users', 'UserController');
 
 });
